@@ -40,7 +40,7 @@ router.post('/', (req, res) => {
     id: Date.now().toString(),
     descripcion: descripcion,
     carbohidratos: req.body.carbohidratos || 0,
-    fecha: new Date().toString()
+    fecha: new Date().toISOString()
   };
 
   db.comidas.push(nuevaComida);
