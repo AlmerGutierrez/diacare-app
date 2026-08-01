@@ -41,7 +41,7 @@ router.post('/', (req, res) => {
     nombre: nombre,
     dosis: req.body.dosis || null,
     tipo: req.body.tipo || 'otro',
-    fecha: new Date().toString()
+    fecha: new Date().toISOString()
   };
 
   db.medicamentos.push(nuevo);

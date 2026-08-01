@@ -40,7 +40,7 @@ router.post('/', (req, res) => {
     id: Date.now().toString(),
     nivel: nivel,
     momento: req.body.momento || 'sin especificar',
-    fecha: new Date().toString()
+    fecha: new Date().toISOString()
   };
 
   db.glucosa.push(nuevaMedicion);
